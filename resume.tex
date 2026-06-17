@@ -1,47 +1,142 @@
-\documentclass[11pt,letterpaper]{article}
-
-\usepackage[margin=0.7in]{geometry}
+\documentclass[11pt]{article}
+\usepackage[letterpaper, top=0.5in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
+\usepackage{XCharter}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{hyperref}
 \usepackage{enumitem}
-\usepackage{parskip}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\raggedright
+\pagestyle{empty}
 
-\pagenumbering{gobble}
-\setlist[itemize]{leftmargin=*, nosep}
-\setlength{\parindent}{0pt}
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule\vspace{-6.5pt}]
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\setlist[itemize]{itemsep=-3pt, leftmargin=12pt, topsep=4pt}
 
 \begin{document}
 
-{\LARGE Your Name} \hfill City, State \\
-\href{mailto:you@example.com}{you@example.com} \hfill +1-555-555-5555 \\
-\href{https://linkedin.com/in/your-profile}{linkedin.com/in/your-profile} \hfill
-\href{https://github.com/your-handle}{github.com/your-handle}
+\centerline{\Huge Siddhaartha B S}
 
-\vspace{0.5cm}
+\vspace{4pt}
+
+\centerline{
+\href{mailto:siddhaartha09@gmail.com}{siddhaartha09@gmail.com} \quad
+\href{tel:+917892926651}{+91 7892926651} \quad
+\href{https://github.com/SIDDHAARTHAA/}{github.com/siddhaarthaa} \quad
+\href{https://www.linkedin.com/in/siddhaartha-bs-041063364}{LinkedIn}
+}
+
+\vspace{-6pt}
 
 \section*{Summary}
-Replace this placeholder with a short professional summary.
 
-\section*{Experience}
-\textbf{Company Name} \hfill Jan 2024 -- Present \\
-Role Title \hfill Location
-\begin{itemize}
-  \item Add impact-focused bullet points here.
-  \item Quantify outcomes where possible.
-\end{itemize}
+Computer Science student focused on backend and software development, with experience building APIs, Linux-based systems, Dockerized AI evaluation environments, and open-source software. Skilled in Go, TypeScript, Node.js, PostgreSQL, Docker, AWS, and CI/CD workflows, with strong interest in backend engineering, distributed systems, observability, and database consistency.
 
-\section*{Projects}
-\textbf{Project Name} \hfill Tech Stack
-\begin{itemize}
-  \item Add a concise description of the project and its impact.
-\end{itemize}
+\vspace{-6pt}
 
 \section*{Education}
-\textbf{University Name} \hfill Graduation Year \\
-Degree Name
+
+\textbf{IIIT Dharwad} \hfill 2023--2027 \\
+Dharwad, Karnataka, India \\
+B.Tech in Computer Science
+
+\vspace{2pt}
+
+\textbf{Ambika Vidyalaya} \hfill 2021--2023 \\
+Puttur, Karnataka, India \hfill Grade: 94\% \\
+Pre-University Education
+
+\vspace{-10pt}
+
+\section*{Achievements}
+
+\begin{itemize}
+\item Secured under 3,000 rank in KCET and COMEDK; scored 96 percentile in JEE Main.
+\item Solved 500+ data structures and algorithms problems across coding platforms.
+\end{itemize}
+
+\vspace{-10pt}
+
+\section*{Experience}
+
+\textbf{Shipd AI, Datacurve} \hfill \textit{AI Evaluation Engineer, Team Terminus} \
+\textit{Contract Contributor} \hfill Mar 2026 -- Present
+\vspace{-8pt}
+\begin{itemize}
+\item Built 5 accepted Project Terminus evaluation environments for software-engineering agents, packaging each task as a prompt, \texttt{environment.zip}, and \texttt{verifier.zip}.
+\item Authored Docker-based environment bundles from broken repositories, ensuring the root \texttt{Dockerfile}, build context, and runtime files reproduced the intended debugging scenario.
+\item Wrote task prompts, setup guidance, and expected success conditions so agent-facing requirements matched the real behavior validated by the hidden verifier.
+\item Developed isolated verifier workflows with root \texttt{verifier.sh} scripts and helper checks that failed on untouched environments and passed only after a correct fix.
+\item Designed selective-difficulty tasks with deterministic validation; one environment was solved in only 1 of 11 agent attempts.
+\end{itemize}
+
+\textbf{Tiled Map Editor} \hfill \textit{Open Source Contributor, C++ and Qt} \
+\href{https://github.com/mapeditor/tiled/pulls?q=is%3Apr+author%3ASIDDHAARTHAA}{View Pull Requests} \hfill Jan 2026 -- Apr 2026
+\vspace{-8pt}
+\begin{itemize}
+\item Authored 8 pull requests, including 5 merged changes, in a large C++ and Qt desktop codebase.
+\item Fixed multi-instance snapping consistency by migrating separate snapping flags to a shared \texttt{SnapMode} enum and synchronizing menu state with persisted settings.
+\item Fixed runtime translation gaps by updating \texttt{LanguageChange} handling across editor widgets, models, action handlers, and dynamic property labels.
+\item Fixed export filename generation when export filters were unset and aligned tileset export filter preference reuse.
+\item Added tileset tab-title fallback behavior so unnamed tilesets display a filename instead of an empty tab title.
+\item Developed contiguous selection and fill behavior for Magic Wand and Bucket Fill tools, including an Alt-based temporary toggle and cleanup of Select Same Tile references.
+\end{itemize}
+
+\textbf{Freelance Video Editor} \hfill \textit{Video Editing, VFX, Motion Graphics} \
+\textit{Global Client Work} \hfill 2023 -- 2025
+\vspace{-8pt}
+\begin{itemize}
+\item Delivered 50+ professional video editing, VFX, and motion graphics projects for 25+ international clients.
+\item Maintained a 5-star Fiverr rating by managing client requirements, revisions, deadlines, and final delivery quality.
+\end{itemize}
+
+\vspace{-10pt}
+
+\section*{Projects}
+
+\textbf{eBPF Sentinel} \hfill \href{https://github.com/SIDDHAARTHAA/ebpf-sentinel}{GitHub} \
+\vspace{-8pt}
+\begin{itemize}
+\item Go and eBPF observability agent attaching kernel probes to \texttt{accept}, \texttt{connect}, \texttt{exec}, \texttt{read}, and \texttt{write}.
+\item Reconstructed L7 HTTP request-response flows from ring-buffer events by correlating \texttt{pid+fd} state with TTL-based eviction.
+\item Implemented profile-driven anomaly detection for unknown processes, unauthorized egress CIDRs and ports, privileged-port access, and exec policy violations.
+\item Added container and Kubernetes metadata enrichment using \texttt{/proc/cgroup} parsing and pod resolution, then exported spans and metrics via OTLP and Prometheus.
+\end{itemize}
+
+\textbf{OpenLedger --- Digital Wallet Platform} \hfill \href{https://github.com/SIDDHAARTHAA/OpenLedger}{GitHub} \
+\vspace{-8pt}
+\begin{itemize}
+\item Built a wallet platform backend using Express, Prisma, and PostgreSQL in a monorepo architecture.
+\item Engineered async deposit flows with mock bank integration, redirect approval, and webhooks.
+\item Designed idempotent settlement logic and atomic balance guards to prevent duplicate credits and race-condition overdrafts.
+\item Developed authentication via Google OAuth and email-password login with bcrypt and HttpOnly cookies.
+\end{itemize}
+
+\textbf{Homelab --- Self-Hosted File Manager} \hfill \href{https://github.com/SIDDHAARTHAA/homelab-final}{GitHub} \
+\vspace{-8pt}
+\begin{itemize}
+\item Built a self-hosted file manager using React, Node.js, and Express for managing files on local storage.
+\item Developed APIs for directory listing, uploads, rename-delete actions, metadata retrieval, and ZIP downloads.
+\item Implemented storage quota tracking, list-grid UI, breadcrumb navigation, and filesystem safety checks.
+\end{itemize}
+
+\vspace{-10pt}
 
 \section*{Skills}
-Languages, frameworks, tools, and platforms.
+
+\textbf{Languages:} C++, TypeScript, JavaScript, Go, SQL, C \
+
+\textbf{Backend and Systems:} Node.js, Express, REST APIs, JWT, OAuth, Prisma ORM, eBPF, Linux internals \
+
+\textbf{Databases:} PostgreSQL, MongoDB \
+
+\textbf{Cloud and DevOps:} AWS (EC2, RDS, S3), Docker, Kubernetes, Linux, Nginx, Cloudflare \
+
+\textbf{Observability:} Prometheus, OpenTelemetry (OTLP), Jaeger \
+
+\textbf{Tools:} Git, GitHub Actions, Postman
 
 \end{document}
