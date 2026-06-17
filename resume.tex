@@ -1,47 +1,97 @@
-\documentclass[11pt,letterpaper]{article}
-
-\usepackage[margin=0.7in]{geometry}
+\documentclass[11pt]{article}
+\usepackage[letterpaper, top=0.5in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{hyperref}
 \usepackage{enumitem}
-\usepackage{parskip}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\raggedright
+\pagestyle{empty}
 
-\pagenumbering{gobble}
-\setlist[itemize]{leftmargin=*, nosep}
-\setlength{\parindent}{0pt}
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule\vspace{-6.5pt}]
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\setlist[itemize]{itemsep=-3pt, leftmargin=12pt, topsep=4pt}
 
 \begin{document}
 
-{\LARGE Your Name} \hfill City, State \\
-\href{mailto:you@example.com}{you@example.com} \hfill +1-555-555-5555 \\
-\href{https://linkedin.com/in/your-profile}{linkedin.com/in/your-profile} \hfill
-\href{https://github.com/your-handle}{github.com/your-handle}
+\centerline{\Huge Siddhaartha B S}
 
-\vspace{0.5cm}
+\vspace{4pt}
+
+\centerline{
+  \href{mailto:siddhaartha09@gmail.com}{siddhaartha09@gmail.com} \quad
+  \href{tel:+917892926651}{+91 7892926651} \quad
+  \href{https://github.com/SIDDHAARTHAA/}{github.com/siddhaarthaa} \quad
+  \href{https://www.linkedin.com/in/siddhaartha-bs-041063364}{LinkedIn} \quad
+  \href{https://sidlabs.shop/}{sidlabs.shop}
+}
+
+\vspace{-6pt}
 
 \section*{Summary}
-Replace this placeholder with a short professional summary.
 
-\section*{Experience}
-\textbf{Company Name} \hfill Jan 2024 -- Present \\
-Role Title \hfill Location
-\begin{itemize}
-  \item Add impact-focused bullet points here.
-  \item Quantify outcomes where possible.
-\end{itemize}
+Computer Science student with strong foundations in data structures, algorithms, and systems engineering, with hands-on experience building reliable, high-performance backends using Go, TypeScript, Node.js, PostgreSQL, and Linux. Focused on data correctness, transactional integrity, and scalable system design. Experienced across SQL and NoSQL databases, Linux internals, shell scripting, and cloud-deployed services.
 
-\section*{Projects}
-\textbf{Project Name} \hfill Tech Stack
-\begin{itemize}
-  \item Add a concise description of the project and its impact.
-\end{itemize}
+\vspace{-6pt}
 
 \section*{Education}
-\textbf{University Name} \hfill Graduation Year \\
-Degree Name
+
+\textbf{IIIT Dharwad} --- B.Tech in Computer Science, Dharwad, Karnataka, India \hfill 2023--2027
+
+\vspace{-10pt}
+
+\section*{Experience}
+
+\textbf{Tiled Map Editor (C++/Qt)} \hfill \textit{Open Source Contributor} \\
+\href{https://github.com/mapeditor/tiled/pulls?q=author\%3ASIDDHAARTHAA+}{View Pull Requests} \hfill 2026 -- Present
+\vspace{-8pt}
+\begin{itemize}
+  \item Contributed 6+ pull requests to the Tiled Map Editor (12k+ GitHub stars), with multiple PRs merged into the mainline codebase.
+  \item Implemented contiguous selection logic used by Bucket Fill and Magic Wand tools, requiring careful algorithmic reasoning about flood-fill traversal and edge cases.
+  \item Fixed export edge cases and synchronization issues between tool instances in a large C++ / Qt codebase involving signal--slot communication and shared editor state.
+\end{itemize}
+
+\vspace{-10pt}
+
+\section*{Projects}
+
+\textbf{OpenLedger -- Digital Wallet Platform} \hfill \href{https://github.com/SIDDHAARTHAA/OpenLedger}{GitHub} \\
+\vspace{-8pt}
+\begin{itemize}
+  \item Built a wallet platform backend in TypeScript using Express, Prisma ORM, and PostgreSQL with a monorepo architecture, supporting multi-user concurrent operations.
+  \item Designed idempotent settlement logic with atomic balance guards to ensure exactly-once credit semantics and prevent race-condition overdrafts under concurrent load.
+  \item Engineered async deposit flows with mock bank webhook integration, including redirect approval, event-driven state transitions, and failure recovery.
+  \item Implemented secure authentication via Google OAuth and email/password with bcrypt hashing and HttpOnly session cookies.
+\end{itemize}
+
+\textbf{eBPF Sentinel} \hfill \href{https://github.com/SIDDHAARTHAA/ebpf-sentinel}{GitHub} \\
+\vspace{-8pt}
+\begin{itemize}
+  \item Built a Go + eBPF kernel observability agent attaching probes to \texttt{accept/connect/exec/read/write} syscalls with minimal overhead by keeping logic in kernel-space ring buffers.
+  \item Reconstructed full L7 HTTP request/response flows from raw ring-buffer events by correlating \texttt{pid+fd} state across kernel callbacks, with TTL-based eviction for cleanup.
+  \item Implemented profile-driven anomaly detection for policy violations including unknown processes, unauthorized egress CIDRs/ports, and privileged-port access.
+  \item Enriched events with container/Kubernetes metadata via \texttt{/proc/cgroup} parsing and pod resolution; exported spans and metrics via OTLP and Prometheus.
+\end{itemize}
+
+\vspace{-10pt}
 
 \section*{Skills}
-Languages, frameworks, tools, and platforms.
+
+\textbf{Languages:} C++, TypeScript, JavaScript, Go, Python, SQL, C \\
+
+\textbf{Frontend:} React, Next.js, Zustand \\
+
+\textbf{Backend \& Systems:} Node.js, Express, REST APIs, JWT, Prisma ORM, eBPF, Linux internals, Shell scripting \\
+
+\textbf{Observability:} Prometheus, OpenTelemetry (OTLP), Jaeger \\
+
+\textbf{Databases:} PostgreSQL, MongoDB \\
+
+\textbf{Cloud \& DevOps:} AWS (EC2, RDS, S3), Docker, Kubernetes, Linux \\
+
+\textbf{Tools:} Git, GitHub Actions, Postman, Nginx, Cloudflare
 
 \end{document}
