@@ -26,14 +26,13 @@
   \href{tel:+917892926651}{+91 7892926651} \quad
   \href{https://github.com/SIDDHAARTHAA/}{github.com/siddhaarthaa} \quad
   \href{https://www.linkedin.com/in/siddhaartha-bs-041063364}{LinkedIn} \quad
-  \href{https://sidlabs.shop/}{sidlabs.shop}
 }
 
 \vspace{-6pt}
 
 \section*{Summary}
 
-Computer Science student with strong foundations in data structures, algorithms, and systems engineering, with hands-on experience building reliable, high-performance backends using Go, TypeScript, Node.js, PostgreSQL, and Linux. Focused on data correctness, transactional integrity, and scalable system design. Experienced across SQL and NoSQL databases, Linux internals, shell scripting, and cloud-deployed services.
+Computer Science student focused on backend and systems engineering, with hands-on experience building reliable backends, debugging complex codebases, and authoring Dockerized evaluation environments. Skilled in Go, TypeScript, Node.js, PostgreSQL, Linux, and distributed systems fundamentals.
 
 \vspace{-6pt}
 
@@ -45,13 +44,20 @@ Computer Science student with strong foundations in data structures, algorithms,
 
 \section*{Experience}
 
+\textbf{Shipd AI, Datacurve} \hfill \textit{AI Evaluation Engineer, Team Terminus} \\
+\textit{Contract Contributor} \hfill Mar 2026 -- Present
+\vspace{-8pt}
+\begin{itemize}
+  \item Built 5 accepted Project Terminus evaluation environments by packaging broken repositories into reproducible Docker-based \texttt{environment.zip} and \texttt{verifier.zip} workflows.
+  \item Authored prompts and verifier scripts that validated real bug fixes deterministically, including a selective-debugging task solved in only 1 of 11 agent attempts.
+\end{itemize}
+
 \textbf{Tiled Map Editor (C++/Qt)} \hfill \textit{Open Source Contributor} \\
 \href{https://github.com/mapeditor/tiled/pulls?q=author\%3ASIDDHAARTHAA+}{View Pull Requests} \hfill 2026 -- Present
 \vspace{-8pt}
 \begin{itemize}
   \item Contributed 6+ pull requests to the Tiled Map Editor (12k+ GitHub stars), with multiple PRs merged into the mainline codebase.
-  \item Implemented contiguous selection logic used by Bucket Fill and Magic Wand tools, requiring careful algorithmic reasoning about flood-fill traversal and edge cases.
-  \item Fixed export edge cases and synchronization issues between tool instances in a large C++ / Qt codebase involving signal--slot communication and shared editor state.
+  \item Implemented contiguous selection logic and fixed export/tool-state edge cases in a large C++ / Qt desktop codebase with shared editor state.
 \end{itemize}
 
 \vspace{-10pt}
@@ -62,18 +68,24 @@ Computer Science student with strong foundations in data structures, algorithms,
 \vspace{-8pt}
 \begin{itemize}
   \item Built a wallet platform backend in TypeScript using Express, Prisma ORM, and PostgreSQL with a monorepo architecture, supporting multi-user concurrent operations.
-  \item Designed idempotent settlement logic with atomic balance guards to ensure exactly-once credit semantics and prevent race-condition overdrafts under concurrent load.
-  \item Engineered async deposit flows with mock bank webhook integration, including redirect approval, event-driven state transitions, and failure recovery.
-  \item Implemented secure authentication via Google OAuth and email/password with bcrypt hashing and HttpOnly session cookies.
+  \item Designed idempotent settlement logic, async deposit flows, and atomic balance guards to prevent duplicate credits and race-condition overdrafts.
 \end{itemize}
 
 \textbf{eBPF Sentinel} \hfill \href{https://github.com/SIDDHAARTHAA/ebpf-sentinel}{GitHub} \\
 \vspace{-8pt}
 \begin{itemize}
   \item Built a Go + eBPF kernel observability agent attaching probes to \texttt{accept/connect/exec/read/write} syscalls with minimal overhead by keeping logic in kernel-space ring buffers.
-  \item Reconstructed full L7 HTTP request/response flows from raw ring-buffer events by correlating \texttt{pid+fd} state across kernel callbacks, with TTL-based eviction for cleanup.
-  \item Implemented profile-driven anomaly detection for policy violations including unknown processes, unauthorized egress CIDRs/ports, and privileged-port access.
-  \item Enriched events with container/Kubernetes metadata via \texttt{/proc/cgroup} parsing and pod resolution; exported spans and metrics via OTLP and Prometheus.
+  \item Reconstructed L7 HTTP flows from raw events, added policy-based anomaly detection, and exported enriched telemetry via OTLP and Prometheus.
+\end{itemize}
+
+\vspace{-10pt}
+
+\section*{Achievements}
+
+\begin{itemize}
+  \item Secured under 3,000 rank in KCET and COMEDK; scored 96 percentile in JEE Main.
+  \item Solved 500+ data structures and algorithms problems across coding platforms.
+  \item Delivered 50+ video editing, VFX, and motion graphics projects for 25+ international clients while maintaining a 5-star Fiverr rating.
 \end{itemize}
 
 \vspace{-10pt}
@@ -81,8 +93,6 @@ Computer Science student with strong foundations in data structures, algorithms,
 \section*{Skills}
 
 \textbf{Languages:} C++, TypeScript, JavaScript, Go, Python, SQL, C \\
-
-\textbf{Frontend:} React, Next.js, Zustand \\
 
 \textbf{Backend \& Systems:} Node.js, Express, REST APIs, JWT, Prisma ORM, eBPF, Linux internals, Shell scripting \\
 
