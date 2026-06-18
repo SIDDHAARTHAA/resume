@@ -1,6 +1,7 @@
 MAIN_TEX := resume.tex
 BUILD_DIR := build
-OUTPUT_PDF := $(BUILD_DIR)/resume.pdf
+BUILD_PDF := $(BUILD_DIR)/resume.pdf
+OUTPUT_PDF := resume.pdf
 
 .PHONY: pdf clean release
 
@@ -14,6 +15,7 @@ pdf:
 		echo "No LaTeX compiler found. Install latexmk or pdflatex, then run 'make pdf' again."; \
 		exit 1; \
 	fi
+	cp $(BUILD_PDF) $(OUTPUT_PDF)
 
 clean:
 	@if command -v latexmk >/dev/null 2>&1; then \
